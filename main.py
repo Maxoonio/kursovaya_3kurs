@@ -72,6 +72,7 @@ class HttpClient:
                 logging.error("HTTP request returned non-ok status %s for %s", resp.status_code, url)
                 raise RuntimeError(f"HTTP error {resp.status_code}")
 
+
 class Dell:
     def __init__(self, service: str, action: str, params: Dict[str, Any]):
         self.zabbix_log_prefix = f"[ DELL ] [ {service} ] [ {action} ]"
